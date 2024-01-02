@@ -1,8 +1,8 @@
 # Documentation for Mail Transfer Protocols
 
-| MTP (Draft) | MTP | SMTP | SMTP | (E)SMTP |
-| - | - | - | - | - |
-| RFC 772 | RFC 780 | RFC 788 | RFC 821 | RFC 5321 |
+| MTP (Draft) | MTP | SMTP | SMTP | (E)SMTP | (E)SMTP |
+| - | - | - | - | - | - |
+| RFC 772 | RFC 780 | RFC 788 | RFC 821 | RFC 2821 | RFC 5321 |
 | | `ABRT` |
 | | `CONT` |
 | | | `DATA` | `DATA` | `DATA` | `DATA` |
