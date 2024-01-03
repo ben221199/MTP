@@ -6,6 +6,7 @@
 | SMTP | `25` | *STARTTLS not supported, see ESMTP* | *Not defined* |
 | ESMTP | `25` | `25` | *Not defined* |
 | (E)SMTP Submission | `587` | `587` | `465` |
+| (E)SMTP ODMR | `366` | `366` | *Not defined* |
 | LMTP | `24` (not defined, but commonly used) | `24` (not defined, but commonly used) | *Not defined* |
 
 ## RFCs for (E)SMTP and LMTP
@@ -59,7 +60,7 @@
 | Keyword | RFC | Additional information |
 | - | - | - |
 | `8BITMIME` | RFC6152 | |
-| `ATRN` | RFC2645 | No submission |
+| `ATRN` | RFC2645 | No submission port. Use `366`. Used for mail providers with prior arrangement between the parties. |
 | `AUTH` |RFC4954 | |
 | `BINARYMIME` | RFC3030 | |
 | `BURL` | RFC4468 | Only submission |
