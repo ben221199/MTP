@@ -33,7 +33,7 @@
 | | | | `TURN` | <-- | *Deprecated* | *Deprecated* |
 | | | `VRFY <SP> <string>` | `VRFY <SP> <string>` | <-- | `"VRFY" SP String` | `"VRFY" SP String` |
 
-### RFCs for SMTP Service Extensions
+## RFCs for SMTP Service Extensions
 
 | RFC 1425 | RFC 1651 | RFC 1869 |
 | - | - | - |
@@ -41,9 +41,9 @@
 
 *Note: These RFCs are obsoleted since RFC 2821, because that RFC included the EHLO command.*
 
-### ELHO/LHLO Keywords for (E)SMTP and LMTP
+## ELHO/LHLO Keywords for (E)SMTP and LMTP
 
-| Keyword | First defined in RFC | Update by RFC | Deprecated/Obsoleted in RFC |
+| Keyword | First defined in RFC | Updated by RFC | Deprecated/Obsoleted in RFC |
 | - | - | - | - |
 | `EXPN` | RFC821 | RFC5321 | - |
 | `HELP` | RFC821 | RFC5321 | - |
@@ -53,3 +53,38 @@
 | `TURN` | RFC821 | - | RFC2821 |
 
 *Note: These (E)SMTP/LMTP commands are optional to implement. Ttheir EHLO/LHLO keyword should be listed if (still) implemented.*
+
+# ELHO/LHLO Keywords for SMTP Service Extensions
+
+| Keyword | RFC | Additional information |
+| - | - | - |
+| `8BITMIME` | RFC6152 | |
+| `ATRN` | RFC2645 | No submission |
+| `AUTH` |RFC4954 | |
+| `BINARYMIME` | RFC3030 | |
+| `BURL` | RFC4468 | Only submission |
+| `CHECKPOINT` | RFC1845 | |
+| `CHUNKING` | RFC3030 | |
+| `CONNEG` | RFC4141 | |
+| `CONPERM` | RFC4141 | |
+| `DELIVERBY` | RFC2852 | |
+| `DSN` | RFC3461 | |
+| `ENHANCEDSTATUSCODES` | RFC2034 | |
+| `ETRN` | RFC1985 | No submission |
+| `FUTURERELEASE` | RFC4865 | |
+| `LIMITS` | `draft-freed-smtp-limits` | Not yet a RFC |
+| `MT-PRIORITY` | RFC6710 | |
+| `MTRK` | RFC3885 | |
+| `NO-SOLICITING` | RFC3865 | |
+| `ONEX` | - | |
+| `PIPELINING` | RFC2920 | |
+| `REQUIRETLS` | RFC8689 | |
+| `RRVS` | RFC7293 | |
+| `SIZE` | RFC1870 | Also see `LIMITS`. |
+| `SMTPUTF8` | RFC6531 | |
+| `STARTTLS` | RFC3207 | |
+| `SUBMITTER` | RFC4405 | Deprecated |
+| `UTF8SMTP` | RFC5336 | Experimental: Deprecated by `SMTPUTF8`. |
+| `VERB` | - | |
+
+*Note: Not all keywords do mean that there also new commands. Some keywords indicate command parameters or support for some charset.*
