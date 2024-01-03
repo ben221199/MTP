@@ -1,5 +1,15 @@
 # Documentation for Mail Transfer Protocols
 
+| Protocol | Cleartext Port | STARTTLS Port | SSL/TLS Port |
+| - | - | - | - |
+| MTP | `57` | *STARTTLS not supported* | *Not defined* |
+| SMTP | `25` | *STARTTLS not supported, see ESMTP* | *Not defined* |
+| ESMTP | `25` | `25` | *Not defined* |
+| (E)SMTP Submission | `587` | `587` | `465` |
+| LMTP | `24` (not defined, but commonly used) | `24` (not defined, but commonly used) | *Not defined* |
+
+## Core Commands
+
 | MTP (Draft) | MTP | SMTP | SMTP | (E)SMTP | (E)SMTP |
 | - | - | - | - | - | - |
 | RFC 772 | RFC 780 | RFC 788 | RFC 821 | RFC 2821 | RFC 5321 |
