@@ -27,10 +27,10 @@
 | `QUIT` | `QUIT` | `QUIT` | `QUIT` | <-- | `QUIT` | `QUIT` |
 | | | `RCPT <SP> TO:<forward-path>` | `RCPT <SP> TO:<forward-path>` | <-- | `RCPT TO:<forward-path> [ SP <rcpt-parameters> ]` | `"RCPT TO:" ( "<Postmaster@" Domain ">" / "<Postmaster>" / Forward-path ) [SP Rcpt-parameters]`
 | | | `RSET` | `RSET` | <-- | `RSET` | `RSET` |
-| | | `SAML <SP> FROM:<reverse-path>` | `SAML <SP> FROM:<reverse-path>` | <-- |
-| | | `SEND <SP> FROM:<reverse-path>` | `SEND <SP> FROM:<reverse-path>` | <-- |
-| | | `SOML <SP> FROM:<reverse-path>` | `SOML <SP> FROM:<reverse-path>` | <-- |
-| | | | `TURN` | <-- |
+| | | `SAML <SP> FROM:<reverse-path>` | `SAML <SP> FROM:<reverse-path>` | <-- | *Obsolete* | *Obsolete* |
+| | | `SEND <SP> FROM:<reverse-path>` | `SEND <SP> FROM:<reverse-path>` | <-- | *Obsolete* | *Obsolete* |
+| | | `SOML <SP> FROM:<reverse-path>` | `SOML <SP> FROM:<reverse-path>` | <-- | *Obsolete* | *Obsolete* |
+| | | | `TURN` | <-- | *Deprecated* | *Deprecated* |
 | | | `VRFY <SP> <string>` | `VRFY <SP> <string>` | <-- | `"VRFY" SP String` | `"VRFY" SP String` |
 
 ### RFCs for SMTP Service Extensions
@@ -40,3 +40,16 @@
 | `"EHLO" SP domain` | `"EHLO" SP domain` | `"EHLO" SP domain` |
 
 *Note: These RFCs are obsoleted since RFC 2821, because that RFC included the EHLO command.*
+
+### ELHO/LHLO Keywords for (E)SMTP and LMTP
+
+| Keyword | First defined in RFC | Update by RFC | Deprecated/Obsoleted in RFC |
+| - | - | - | - |
+| `EXPN` | RFC821 | RFC5321 | - |
+| `HELP` | RFC821 | RFC5321 | - |
+| `SAML` | RFC821 | RFC1123 | RFC2821 |
+| `SEND` | RFC821 | RFC1123 | RFC2821 |
+| `SOML` | RFC821 | RFC1123 | RFC2821| 
+| `TURN` | RFC821 | - | RFC2821 |
+
+*Note: These (E)SMTP/LMTP commands are optional to implement. Ttheir EHLO/LHLO keyword should be listed if (still) implemented.*
