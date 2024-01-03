@@ -60,10 +60,10 @@
 | Keyword | RFC | Additional information |
 | - | - | - |
 | `8BITMIME` | RFC6152 | |
-| `ATRN` | RFC2645 | No submission port. Use `366`. Used for mail providers with prior arrangement between the parties. |
+| `ATRN` | RFC2645 | No submission port. Use `366`. Used by mail providers with prior arrangement between the parties. |
 | `AUTH` |RFC4954 | |
 | `BINARYMIME` | RFC3030 | |
-| `BURL` | RFC4468 | Only submission |
+| `BURL` | RFC4468 | Only submission port. Use `587` or `465`. Used by mail clients that want the SMTP server to send mail that is available at some IMAP server, without first downloading it themself. |
 | `CHECKPOINT` | RFC1845 | |
 | `CHUNKING` | RFC3030 | |
 | `CONNEG` | RFC4141 | |
@@ -71,7 +71,7 @@
 | `DELIVERBY` | RFC2852 | |
 | `DSN` | RFC3461 | |
 | `ENHANCEDSTATUSCODES` | RFC2034 | |
-| `ETRN` | RFC1985 | No submission |
+| `ETRN` | RFC1985 | No submission port. Use `25`. Used by mail providers that want other mail providers to start queuing their mail to them. |
 | `FUTURERELEASE` | RFC4865 | |
 | `LIMITS` | `draft-freed-smtp-limits` | Not yet a RFC |
 | `MT-PRIORITY` | RFC6710 | |
